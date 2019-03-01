@@ -1,8 +1,7 @@
-# NepalFoodBank
+# Nepal Food Bank
 Work in progress
 
 ### Contracts Files Description Table
-
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
@@ -11,9 +10,7 @@ Work in progress
 | ./contracts/NFBShare.sol | 997c16b4661aa8ca06129e5a72d6e807211282ef |
 | ./contracts/Token.sol | 54f3ab17de20e76ced75c8bc87ac530628b97348 |
 
-
 ### Contracts Description Table
-
 
 |  Contract  |         Type        |       Bases      |                  |                 |
 |:----------:|:-------------------:|:----------------:|:----------------:|:---------------:|
@@ -47,7 +44,6 @@ Work in progress
 | └ | mint | External ❗️ | 🛑  | outMsg |
 | └ | burnFrom | External ❗️ | 🛑  | |
 | └ | burnFrom | External ❗️ | 🛑  | outMsg |
-
 
 ### Legend
 

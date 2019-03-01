@@ -13,3 +13,4 @@ contract NFBShare is Token {
     // but WE want to go micro/nano transactions. Rs. 1 = 1e18 nano paisa (1 followed by 18 zeros)
     // moar over don't steal dust % paisa as 2 decimal rounded up value from our users's funds
 }
+// Skip this for ERC721

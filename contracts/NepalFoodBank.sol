@@ -1,6 +1,6 @@
 pragma solidity >0.4.99 <0.6.0;
 
-import "./NFBShare.sol";
+// import "./NFBShare.sol";
 import "./NPaisa.sol";
 /** 
  * L1-L3 and everything can be dapps managing their own underlying roles.
@@ -47,14 +47,14 @@ library NFBLib {
     }
 
 }
+
 contract NepalFoodBank {
     NPaisa public nPaisa; // ERC20 Token
-    NFBShare public nfbShare; //? try ERC721, 100 NPaisa = 1 share? NFT
+    // NFBShare public nfbShare; //? try ERC721, 100 NPaisa = 1 share? NFT
     // follow Company RULES better
     constructor() public {
         nPaisa = new NPaisa(); // we'll init token from here, next
-        nfbShare = new NFBShare();
+        // nfbShare = new NFBShare();
     }
-
 
 }

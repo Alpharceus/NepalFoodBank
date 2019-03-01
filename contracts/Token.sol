@@ -19,6 +19,8 @@ contract Token is IERC20 {
     
     constructor() public {
         data.NFB = msg.sender; // deploy from NFB
+        data.dailyLimit = 100000*1e18;
+        data.monthlyLimit = 500000*1e18;
     }
 
     modifier outMsg(address from, address to, bytes memory extraData) {
@@ -38,13 +40,11 @@ contract Token is IERC20 {
     }
 
     function balanceOf(address owner) external view returns(uint256) {
-        return data.balance[address(0)][owner];
+        return data.user[owner].balance;
     }
 
     function allowance(address owner, address spender) external view returns(uint256) {
-        return data.balance[owner][spender];
-        // [0x0, user] => user balance
-        // [owner, spender] = spender allowance
+        return data.user[owner].allowance[spender];
     }
 
     function message(
