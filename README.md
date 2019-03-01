@@ -5,12 +5,10 @@ Work in progress
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| ./contracts/NepalFoodBank.sol | b480d818684cf20749e186cc7207fcabc3974651 |
+| ./contracts/NepalFoodBank.sol | ccb95ccc48326bb7fa7a077dc211f1bd5369de28 |
 | ./contracts/NPaisa.sol | db9caa25e0571c20aa33b660857064c83c96385c |
-| ./contracts/NFBShare.sol | 997c16b4661aa8ca06129e5a72d6e807211282ef |
-| ./contracts/Token.sol | 54f3ab17de20e76ced75c8bc87ac530628b97348 |
+| ./contracts/Token.sol | 39745a5b18c8b4385d54c8c4bf0e5e8dd0d1c313 |
 
-### Contracts Description Table
 
 |  Contract  |         Type        |       Bases      |                  |                 |
 |:----------:|:-------------------:|:----------------:|:----------------:|:---------------:|
@@ -24,8 +22,6 @@ Work in progress
 | └ | \<Constructor\> | Public ❗️ | 🛑  | |
 ||||||
 | **NPaisa** | Implementation | Token |||
-||||||
-| **NFBShare** | Implementation | Token |||
 ||||||
 | **Token** | Implementation | IERC20 |||
 | └ | \<Constructor\> | Public ❗️ | 🛑  | |
@@ -45,11 +41,13 @@ Work in progress
 | └ | burnFrom | External ❗️ | 🛑  | |
 | └ | burnFrom | External ❗️ | 🛑  | outMsg |
 
+
 ### Legend
 
 |  Symbol  |  Meaning  |
 |:--------:|-----------|
 |    🛑    | Function can modify state |
 |    💵    | Function is payable |
+
 
 Generated using Surya (Solidity Inspector)
