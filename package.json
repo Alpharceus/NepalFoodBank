@@ -6,13 +6,15 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "surya": "surya mdreport Surya.md  ./contracts/NepalFoodBank.sol ./contracts/NPaisa.sol ./contracts/NFBShare.sol ./contracts/Token.sol"
+    "graph": "surya graph contracts/FoodBank/* | dot -Tpng > FoodBank.png && surya graph contracts/Token/* | dot -Tpng > Token.png",
+    "surya": "surya mdreport Surya.md  ./contracts/FoodBank/* ./contracts/Token/* "
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "surya": "^0.2.7"
   },
   "dependencies": {
     "web3": "^1.0.0-beta.37"

@@ -1,8 +1,8 @@
 const NFB = artifacts.require("NepalFoodBank")
 const NPaisa = artifacts.require("NPaisa")
 // const NFBShare = artifacts.require("NFBShare")
-const SafeMath = artifacts.require("SafeMath")
-const ERC20 = artifacts.require("ERC20")
+// const SafeMath = artifacts.require("SafeMath")
+// const ERC20 = artifacts.require("XERC20")
 
 module.exports = function (deployer) {
     //deployer.deploy(SafeMath)
@@ -14,7 +14,7 @@ module.exports = function (deployer) {
         gasPrice: 5000000000
     }).then(async (nfb) => {
         console.log("   > Nepal Food Bank:    ", await nfb.address)
-        console.log("   > NPaisa :            ", await nfb.nPaisa())
+        console.log("   > NPaisa:             ", await nfb.nPaisa())
         // console.log("   > NFB Share :         ", await nfb.nfbShare())
     })
 }
