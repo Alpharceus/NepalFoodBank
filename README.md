@@ -1,13 +1,22 @@
-# Nepal Food Bank
-Work in progress
+## Nepal Food Bank 
 
-### Contracts Files Description Table
+ Work in Progress
+
+### Contract Files Description Table
+
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| ./contracts/NepalFoodBank.sol | ccb95ccc48326bb7fa7a077dc211f1bd5369de28 |
-| ./contracts/NPaisa.sol | db9caa25e0571c20aa33b660857064c83c96385c |
-| ./contracts/Token.sol | 39745a5b18c8b4385d54c8c4bf0e5e8dd0d1c313 |
+| ./contracts/FoodBank/NepalFoodBank.sol | 9e7f3dc68fe47f64a4874a8f94bf5bf06e1dc0f9 |
+| ./contracts/FoodBank/Roles.sol | 538ce2d7a3a144bd88e0c4779fcd573c1bd4bff7 |
+| ./contracts/Token/NFBShare.sol | f9dab4a7642bf130c6b24916d4556e08d4ca99d1 |
+| ./contracts/Token/NPaisa.sol | db9caa25e0571c20aa33b660857064c83c96385c |
+| ./contracts/Token/SafeERC20.sol | 3e75740cccfb874763dd681f293e84eb5b8a665b |
+| ./contracts/Token/Token.sol | 42e40a69705c51e77ee6d90f33e54414481c6f71 |
+| ./contracts/Token/XERC20.sol | beca1402cbd6a66af8443b21353d041ccc9f1d03 |
+
+
+### Contracts Description Table
 
 
 |  Contract  |         Type        |       Bases      |                  |                 |
@@ -21,25 +30,47 @@ Work in progress
 | **NepalFoodBank** | Implementation |  |||
 | └ | \<Constructor\> | Public ❗️ | 🛑  | |
 ||||||
+| **Roles** | Library |  |||
+||||||
+| **NFBShare** | Implementation | Token |||
+||||||
 | **NPaisa** | Implementation | Token |||
+||||||
+| **SafeERC20** | Library |  |||
+| └ | safeTransfer | Internal 🔒 | 🛑  | |
+| └ | safeTransferFrom | Internal 🔒 | 🛑  | |
+| └ | safeApprove | Internal 🔒 | 🛑  | |
+| └ | safeIncreaseAllowance | Internal 🔒 | 🛑  | |
+| └ | safeDecreaseAllowance | Internal 🔒 | 🛑  | |
 ||||||
 | **Token** | Implementation | IERC20 |||
 | └ | \<Constructor\> | Public ❗️ | 🛑  | |
-| └ | switchNFB | External ❗️ | 🛑  | |
-| └ | totalSupply | External ❗️ |   | |
-| └ | balanceOf | External ❗️ |   | |
-| └ | allowance | External ❗️ |   | |
+| └ | switchNFB | External ❗️ | 🛑  |NO❗️ |
+| └ | totalSupply | External ❗️ |   |NO❗️ |
+| └ | balanceOf | External ❗️ |   |NO❗️ |
+| └ | allowance | External ❗️ |   |NO❗️ |
 | └ | message | External ❗️ | 🛑  | outMsg |
-| └ | transfer | External ❗️ | 🛑  | |
+| └ | transfer | External ❗️ | 🛑  |NO❗️ |
 | └ | transfer | External ❗️ | 🛑  | outMsg |
-| └ | approve | External ❗️ | 🛑  | |
+| └ | approve | External ❗️ | 🛑  |NO❗️ |
 | └ | approve | External ❗️ | 🛑  | outMsg |
-| └ | transferFrom | External ❗️ | 🛑  | |
+| └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 | └ | transferFrom | External ❗️ | 🛑  | outMsg |
-| └ | mint | External ❗️ | 🛑  | |
+| └ | mint | External ❗️ | 🛑  |NO❗️ |
 | └ | mint | External ❗️ | 🛑  | outMsg |
-| └ | burnFrom | External ❗️ | 🛑  | |
+| └ | burnFrom | External ❗️ | 🛑  |NO❗️ |
 | └ | burnFrom | External ❗️ | 🛑  | outMsg |
+||||||
+| **XERC20** | Library |  |||
+| └ | switchNFB | Internal 🔒 | 🛑  | isNFB |
+| └ | transfer | Internal 🔒 | 🛑  | |
+| └ | approve | Internal 🔒 | 🛑  | checkpoint |
+| └ | transferFrom | Internal 🔒 | 🛑  | checkpoint |
+| └ | increaseAllowance | Internal 🔒 | 🛑  | checkpoint |
+| └ | decreaseAllowance | Internal 🔒 | 🛑  | |
+| └ | _transfer | Private 🔐 | 🛑  | checkpoint checkLimit |
+| └ | mint | Internal 🔒 | 🛑  | isNFB checkpoint |
+| └ | burnFrom | Internal 🔒 | 🛑  | isNFB checkpoint |
 
 
 ### Legend
@@ -48,6 +79,3 @@ Work in progress
 |:--------:|-----------|
 |    🛑    | Function can modify state |
 |    💵    | Function is payable |
-
-
-Generated using Surya (Solidity Inspector)

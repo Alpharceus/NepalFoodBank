@@ -7,7 +7,7 @@
     "build": "webpack",
     "dev": "webpack-dev-server",
     "graph": "surya graph contracts/FoodBank/* | dot -Tpng > FoodBank.png && surya graph contracts/Token/* | dot -Tpng > Token.png",
-    "surya": "surya mdreport Surya.md  ./contracts/FoodBank/* ./contracts/Token/* "
+    "surya": "surya mdreport README.md ./contracts/FoodBank/* ./contracts/Token/*"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
